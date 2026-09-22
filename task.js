@@ -41,7 +41,7 @@ var pick_task = Math.floor(Math.random() * task.length);
   e("micro_task_body").innerHTML += "<div style='background:black;color:white;' >"+
                                     "<h3><img src='https://mngz47.github.io/micro-task/wendy.PNG' width=70px />Hi Im Aveti <small>score free credits with micro task</small></h3>"+
                                     "<h4>"+task[pick_task]["name"]+" <small>credits("+task[pick_task]["credits"]+")</small></h4>"+
-                                    "<p>"+task[pick_task]["description"]+" <a href=# onclick='toggle(e(\"task_steps\"));' >Show Steps</a></p>"+  
+                                    "<p>"+task[pick_task]["description"]+" <a href=# onclick='toggle(e(\"task_steps\"));return false;' >Show Steps</a></p>"+  
                                    "<div id=task_steps ></div>"+
 "</div>";
 
@@ -63,13 +63,13 @@ if (step_count<task_step.length){
    steps += "<p><strong> Step ("+ (step_count+1) +" of "+task_step.length+")</strong><h5>"+task_step[step_count]["step_name"]+"</h5>"+task_step[step_count]["description"]+"</p>"; 
     
   } 
-    step_count+=1;
+    
   e('task_steps').innerHTML = steps+"<a href=# onclick='loadNextTaskStep();return false;' >Next Step</a>";
-  
+  step_count+=1;
 }else{
-    step_count = 0;
+   
   e('task_steps').innerHTML = steps+"<br><a href='https://docs.google.com/forms/d/e/1FAIpQLScsVQyZDhG1n3lh6bRfyqLKzsP3TA4taqt5iyWX9yp3N5rVhA/viewform?usp=publish-editor' >Submit Proof</a>";
-  
+   step_count = 0;
 }
 }
 
