@@ -45,8 +45,32 @@ var pick_task = Math.floor(Math.random() * task.length);
                                    "<div id=task_steps ></div>"+
 "</div>";
 
-   loadNextTaskStep(task[pick_task]["name"])
+  current_task = task[pick_task]["name"];
+   loadNextTaskStep();
 
+}
+
+var current_Task = "";
+
+var step_count = 0;
+
+function loadNextTaskStep(){
+var steps = "";
+if (step_count<task_step.length){
+
+  if(current_Task == task_step[step_count]["task_name"] || "*" == task_step[step_count]["task_name"]){
+
+   steps += "<p><strong> Step ("+ (step_count+1) +" of "+task_step.length+")</strong><h5>"+task_step[step_count]["step_name"]+"</h5>"+task_step[step_count]["description"]+"</p>"; 
+    
+  } 
+    step_count+=1;
+  e('task_steps').innerHTML = steps+"<a href=# onclick='loadNextTaskStep();return false;' >Next Step</a>";
+  
+}else{
+    step_count = 0;
+  e('task_steps').innerHTML = steps+"<br><a href='https://docs.google.com/forms/d/e/1FAIpQLScsVQyZDhG1n3lh6bRfyqLKzsP3TA4taqt5iyWX9yp3N5rVhA/viewform?usp=publish-editor' >Submit Proof</a>";
+  
+}
 }
 
 function loadTaskStep(task){
@@ -62,28 +86,6 @@ for(var a=0;a<task_step.length;a++){
 }
  e('task_steps').innerHTML = "<h4>"+task_step.length+" total steps</h4>"+steps+
       "<br><a href='https://docs.google.com/forms/d/e/1FAIpQLScsVQyZDhG1n3lh6bRfyqLKzsP3TA4taqt5iyWX9yp3N5rVhA/viewform?usp=publish-editor' >Submit Proof</a>";
-}
-
-var step_count = 0;
-
-function loadNextTaskStep(task){
-var steps = "";
-if (step_count<task_step.length){
-
-  if(task == task_step[step_count]["task_name"] || "*" == task_step[step_count]["task_name"]){
-
-   steps += "<p><strong> Step ("+ (step_count+1) +" of "+task_step.length+")</strong><h5>"+task_step[step_count]["step_name"]+"</h5>"+task_step[step_count]["description"]+"</p>"; 
-    
-  } 
-    step_count+=1;
-  e('task_steps').innerHTML = steps+"<a href=# onclick='loadNextTaskStep(\'"+task+"\'.trim());return false;' >Next Step</a>";
-  
-}else{
-    step_count = 0;
-  e('task_steps').innerHTML = steps+"<br><a href='https://docs.google.com/forms/d/e/1FAIpQLScsVQyZDhG1n3lh6bRfyqLKzsP3TA4taqt5iyWX9yp3N5rVhA/viewform?usp=publish-editor' >Submit Proof</a>";
-  
-}
-  
 }
 
   loadTask();
