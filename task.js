@@ -34,12 +34,30 @@ var task_step = [{"task_name":"Clipster Training Server Invite",
 }];
 
 
-function loadTaskRequest(){
+function loadTask(){
 
-var pick_task = Math.random(task.length);
+var pick_task = Math.floor(Math.random() * task.length);
   
-  e("micro_task_body").innerHTML += 
+  e("micro_task_body").innerHTML += "<div><h4>"+task[pick_task]["name"]+"</h4>"+
+                                    "<p>"+task[pick_task]["description"]+"</p>"+  
+                                    loadTaskStep(task[pick_task]["name"])
+  "<a href="" >Submit Proof</a>"+                                  
+  "</div>";
 
+}
+
+function loadTaskStep(task){
+var steps = "";
+  
+for(var a=0;a<task_step.length;a++){
+
+  if(task == task_step[a]["task_name"] || "*" == task_step[a]["task_name"]){
+
+   steps += "<p><h5>"+task_step[a]["step_name"]+"</h5>"+task_step[a]["description"]+"</p>"; 
+    
+  } 
+}
+  return steps;
 }
 
 
