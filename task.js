@@ -59,6 +59,8 @@ for(var a=0;a<task_step.length;a++){
     
   } 
 }
+
+  loadTask();
   return steps;
 }
 
