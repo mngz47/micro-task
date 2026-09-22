@@ -42,7 +42,7 @@ var pick_task = Math.floor(Math.random() * task.length);
                                     "<h3>Hi Im Aveti <small>score free credits with micro task</small></h3>"+
                                     "<h4>"+task[pick_task]["name"]+" <small>credits("+task[pick_task]["credits"]+")</small></h4>"+
                                     "<p>"+task[pick_task]["description"]+" <a href=# onclick='toggle(\"task_steps\");' >Show Steps</a></p>"+  
-                                    loadTaskStep(task[pick_task]["name"])+
+                                    loadNextTaskStep(task[pick_task]["name"])+
 "</div>";
 
 }
