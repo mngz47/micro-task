@@ -1,53 +1,30 @@
-//   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-jQuery.getJSON('http://websitescraper.herokuapp.com/?url=http://ichart.finance.yahoo.com/table.csv?s=RIL.BO&callback=?', function (csvdata) {
-  console.log(csvdata.csvToArray());
-});
-  
-function ExportToTable() {  
-            var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.csv)$/;  
-      
-            //Checks whether the file is a valid csv file    
-            if (regex.test($("#csvfile").val().toLowerCase())) {  
-                //Checks whether the browser supports HTML5    
-                if (typeof(FileReader) != "undefined") {  
-                    var reader = new FileReader();  
-                    
-                    reader.onload = function(e) {  
-                        var table = $("#csvtable > tbody");  
-         
-                        //Splitting of Rows in the csv file    
-                        var csvrows = e.target.result.split("\n");  
-                        
-                        for (var i = 0; i < csvrows.length; i++) {  
-                            if (csvrows[i] != "") {  
-                                var row = "<tr>";  
-                                var csvcols = csvrows[i].split(",");  
-                           
-                                //Looping through each cell in a csv row    
-                                for (var j = 0; j < csvcols.length; j++) {  
-                                    var cols = "<td>" + csvcols[j] + "</td>";  
-                                    
-                                    row += cols;  
-                                }  
-           
-                                row += "</tr>";  
-           
-                                table.append(row);  
-                            }  
-                        }  
-                        
-                        $('#csvtable').show();  
-                    }  
-                    
-                    reader.readAsText($("#csvfile")[0].files[0]);  
-                } else {  
-                    alert("Sorry! Your browser does not support HTML5!");  
-                }  
-            } else {  
-                alert("Please upload a valid CSV file!");  
-            }  
-        }
- 
-   // <input type="file" id="csvfile" />  
-  //<input class="form-control btn" type="button" id="viewfile" value="Turn Key" onclick="ExportToTable();" />  
-  
+var task = [{"name":"Clipster Training Server Invite",
+                  "description": "Send a Customized message to someone you know who is successfull on social media",
+                  "credits":"20"
+},
+ {"name":"Submit Clip For Campaign",
+                  "description": "Submit post for active social media campaign, no followers required",
+                  "credits":"40"
+}];
+
+var task_step = [{"task_name":"Clipster Training Server Invite",
+                 "step_name":"Copy Invite Message and send it to target audience"
+                  "description": "Hi\n"+
+                                  "We in the same page niche\n"+
+                                  "We are looking for pages in your niche for an ongoing sponsored campaign. Let me know on my discord chat so that I can send you further details\n"
+                                  "(https://discord.gg/hpSBRwWMQ5)\n"+
+                                  "Use paying audio on you next viral video (https://mngz47.itch.io/clipster-training)\n"+
+                                  "#streamer #clips #kick #twitch #memes #whop #clipster #unickbot #virality"
+},
+{"task_name":"Submit Clip For Campaign",
+                 "step_name":"Browse active campaigns"
+                  "description": "Hi\n"+
+                                  "We in the same page niche\n"+
+                                 
+                 {"task_name":"*",
+                 "step_name":"Send Proof",
+                  "description": "Take screenshot of message and send it through 'submit proof'"                 
+}];
+
+
+
