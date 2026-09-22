@@ -39,7 +39,7 @@ function loadTask(){
 var pick_task = Math.floor(Math.random() * task.length);
   
   e("micro_task_body").innerHTML += "<div style='background:black;color:white;' >"+
-                                    "<h3>Hi Im Aveti <small>score free credits with micro task</small></h3>"+
+                                    "<h3><img src='https://mngz47.github.io/micro-task/wendy.PNG' width=70px />Hi Im Aveti <small>score free credits with micro task</small></h3>"+
                                     "<h4>"+task[pick_task]["name"]+" <small>credits("+task[pick_task]["credits"]+")</small></h4>"+
                                     "<p>"+task[pick_task]["description"]+" <a href=# onclick='toggle(e(\"task_steps\"));' >Show Steps</a></p>"+  
                                    "<div id=task_steps ></div>"+
@@ -76,7 +76,7 @@ if (step_count<task_step.length){
     
   } 
     step_count+=1;
-  e('task_steps').innerHTML = steps+"<a href=# onclick='loadNextTaskStep(\'"+task+"\');return false;' >Next Step</a>";
+  e('task_steps').innerHTML = steps+"<a href=# onclick='loadNextTaskStep(\'"+task+"\'.trim());return false;' >Next Step</a>";
   
 }else{
     step_count = 0;
