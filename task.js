@@ -11,7 +11,7 @@ var task_step = [{"task_name":"Clipster Training Server Invite",
                  "step_name":"Copy Invite Message and send it to target audience",
                   "description": "Hi\n"+
                                   "We in the same page niche\n"+
-                                  "We are looking for pages in your niche for an ongoing sponsored campaign. Let me know on my discord chat so that I can send you further details\n"
+                                  "We are looking for pages in your niche for an ongoing sponsored campaign. Let me know on my discord chat so that I can send you further details\n"+
                                   "(https://discord.gg/hpSBRwWMQ5)\n"+
                                   "Use paying audio on you next viral video (https://mngz47.itch.io/clipster-training)\n"+
                                   "#streamer #clips #kick #twitch #memes #whop #clipster #unickbot #virality"
