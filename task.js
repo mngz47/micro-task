@@ -43,8 +43,7 @@ var pick_task = Math.floor(Math.random() * task.length);
                                     "<h4>"+task[pick_task]["name"]+" <small>credits("+task[pick_task]["credits"]+")</small></h4>"+
                                     "<p>"+task[pick_task]["description"]+" <a href=# onclick='toggle(\"task_steps\");' >Show Steps</a></p>"+  
                                     loadTaskStep(task[pick_task]["name"])+
-  "<a href='https://docs.google.com/forms/d/e/1FAIpQLScsVQyZDhG1n3lh6bRfyqLKzsP3TA4taqt5iyWX9yp3N5rVhA/viewform?usp=publish-editor' >Submit Proof</a>"+                                  
-  "</div>";
+"</div>";
 
 }
 
@@ -59,8 +58,30 @@ for(var a=0;a<task_step.length;a++){
     
   } 
 }
-  return "<div id=task_steps >"+steps+"</div>";
+  return "<div id=task_steps ><h4>"+task_step.length+" total steps</h4>"+steps+
+      "<br><a href='https://docs.google.com/forms/d/e/1FAIpQLScsVQyZDhG1n3lh6bRfyqLKzsP3TA4taqt5iyWX9yp3N5rVhA/viewform?usp=publish-editor' >Submit Proof</a>"+                                  
+    "</div>";
 }
 
+var step_count = 0;
+
+function loadNextTaskStep(task){
+var steps = "";
+if (step_count<task_step.length){
+
+  if(task == task_step[step_count]["task_name"] || "*" == task_step[step_count]["task_name"]){
+
+   steps += "<p><strong> Step ("+ (step_count+1) +" of "+task_step.length+")</strong><h5>"+task_step[step_count]["step_name"]+"</h5>"+task_step[step_count]["description"]+"</p>"; 
+    
+  } 
+    step_count+=1;
+  return "<div id=task_steps >"+steps+"<a href=# onclick='e(\'task_steps\').innerHTML=loadNextTaskStep(\'"+task+"\');return false;' >Next Step</a></div>";
+}else{
+    step_count = 0;
+  return "<div id=task_steps >"+steps+"</div>"+
+     "<br><a href='https://docs.google.com/forms/d/e/1FAIpQLScsVQyZDhG1n3lh6bRfyqLKzsP3TA4taqt5iyWX9yp3N5rVhA/viewform?usp=publish-editor' >Submit Proof</a>";
+}
+  
+}
 
   loadTask();
