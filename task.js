@@ -59,9 +59,8 @@ for(var a=0;a<task_step.length;a++){
     
   } 
 }
-
-  loadTask();
   return "<div id=task_steps >"+steps+"</div>";
 }
 
 
+  loadTask();
