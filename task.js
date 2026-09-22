@@ -41,9 +41,11 @@ var pick_task = Math.floor(Math.random() * task.length);
   e("micro_task_body").innerHTML += "<div style='background:black;color:white;' >"+
                                     "<h3>Hi Im Aveti <small>score free credits with micro task</small></h3>"+
                                     "<h4>"+task[pick_task]["name"]+" <small>credits("+task[pick_task]["credits"]+")</small></h4>"+
-                                    "<p>"+task[pick_task]["description"]+" <a href=# onclick='toggle(\"task_steps\");' >Show Steps</a></p>"+  
-                                    loadNextTaskStep(task[pick_task]["name"])+
+                                    "<p>"+task[pick_task]["description"]+" <a href=# onclick='toggle(e(\"task_steps\"));' >Show Steps</a></p>"+  
+                                   "<div id=task_steps ></div>"+
 "</div>";
+
+   loadNextTaskStep(task[pick_task]["name"])
 
 }
 
@@ -58,9 +60,8 @@ for(var a=0;a<task_step.length;a++){
     
   } 
 }
-  return "<div id=task_steps ><h4>"+task_step.length+" total steps</h4>"+steps+
-      "<br><a href='https://docs.google.com/forms/d/e/1FAIpQLScsVQyZDhG1n3lh6bRfyqLKzsP3TA4taqt5iyWX9yp3N5rVhA/viewform?usp=publish-editor' >Submit Proof</a>"+                                  
-    "</div>";
+ e('task_steps').innerHTML = "<h4>"+task_step.length+" total steps</h4>"+steps+
+      "<br><a href='https://docs.google.com/forms/d/e/1FAIpQLScsVQyZDhG1n3lh6bRfyqLKzsP3TA4taqt5iyWX9yp3N5rVhA/viewform?usp=publish-editor' >Submit Proof</a>";
 }
 
 var step_count = 0;
@@ -75,11 +76,12 @@ if (step_count<task_step.length){
     
   } 
     step_count+=1;
-  return "<div id=task_steps >"+steps+"<a href=# onclick='e(\'task_steps\').innerHTML=loadNextTaskStep(\'"+task+"\');return false;' >Next Step</a></div>";
+  e('task_steps').innerHTML = steps+"<a href=# onclick='loadNextTaskStep(\'"+task+"\');return false;' >Next Step</a>";
+  
 }else{
     step_count = 0;
-  return "<div id=task_steps >"+steps+"</div>"+
-     "<br><a href='https://docs.google.com/forms/d/e/1FAIpQLScsVQyZDhG1n3lh6bRfyqLKzsP3TA4taqt5iyWX9yp3N5rVhA/viewform?usp=publish-editor' >Submit Proof</a>";
+  e('task_steps').innerHTML = steps+"<br><a href='https://docs.google.com/forms/d/e/1FAIpQLScsVQyZDhG1n3lh6bRfyqLKzsP3TA4taqt5iyWX9yp3N5rVhA/viewform?usp=publish-editor' >Submit Proof</a>";
+  
 }
   
 }
