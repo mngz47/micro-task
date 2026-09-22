@@ -39,9 +39,9 @@ function loadTask(){
 var pick_task = Math.floor(Math.random() * task.length);
   
   e("micro_task_body").innerHTML += "<div>"+
-                                    "<h3>Hi Im Aveti<small> score free credits with micro task</small></h3>"+
+                                    "<h3>Hi Im Aveti <small>score free credits with micro task</small></h3>"+
                                     "<h4>"+task[pick_task]["name"]+" <small>credits("+task[pick_task]["credits"]+")</small></h4>"+
-                                    "<p>"+task[pick_task]["description"]+"</p>"+  
+                                    "<p>"+task[pick_task]["description"]+" <a href=# onclick='toggle(\"task_steps\");' >Show Steps</a></p>"+  
                                     loadTaskStep(task[pick_task]["name"])+
   "<a href='https://docs.google.com/forms/d/e/1FAIpQLScsVQyZDhG1n3lh6bRfyqLKzsP3TA4taqt5iyWX9yp3N5rVhA/viewform?usp=publish-editor' >Submit Proof</a>"+                                  
   "</div>";
@@ -55,13 +55,13 @@ for(var a=0;a<task_step.length;a++){
 
   if(task == task_step[a]["task_name"] || "*" == task_step[a]["task_name"]){
 
-   steps += "<p><h5>"+task_step[a]["step_name"]+"</h5>"+task_step[a]["description"]+"</p>"; 
+   steps += "<p><strong> Step ("+ (a+1) +")</strong><h5>"+task_step[a]["step_name"]+"</h5>"+task_step[a]["description"]+"</p>"; 
     
   } 
 }
 
   loadTask();
-  return steps;
+  return "<div id=task_steps >"+steps+"</div>";
 }
 
 
