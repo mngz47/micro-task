@@ -40,7 +40,7 @@ var pick_task = Math.floor(Math.random() * task.length);
   
   e("micro_task_body").innerHTML += "<div><h4>"+task[pick_task]["name"]+"</h4>"+
                                     "<p>"+task[pick_task]["description"]+"</p>"+  
-                                    loadTaskStep(task[pick_task]["name"])
+                                    loadTaskStep(task[pick_task]["name"])+
   "<a href="" >Submit Proof</a>"+                                  
   "</div>";
 
