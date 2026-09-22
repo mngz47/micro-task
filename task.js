@@ -41,7 +41,7 @@ var pick_task = Math.floor(Math.random() * task.length);
   e("micro_task_body").innerHTML += "<div><h4>"+task[pick_task]["name"]+"</h4>"+
                                     "<p>"+task[pick_task]["description"]+"</p>"+  
                                     loadTaskStep(task[pick_task]["name"])+
-  "<a href="" >Submit Proof</a>"+                                  
+  "<a href='https://docs.google.com/forms/d/e/1FAIpQLScsVQyZDhG1n3lh6bRfyqLKzsP3TA4taqt5iyWX9yp3N5rVhA/viewform?usp=publish-editor' >Submit Proof</a>"+                                  
   "</div>";
 
 }
