@@ -50,7 +50,7 @@ var pick_task = Math.floor(Math.random() * task.length);
 
 }
 
-var current_Task = "";
+var current_task = "";
 
 var step_count = 0;
 
@@ -58,7 +58,7 @@ function loadNextTaskStep(){
 var steps = "";
 if (step_count<task_step.length){
 
-  if(current_Task == task_step[step_count]["task_name"] || "*" == task_step[step_count]["task_name"]){
+  if(current_task == task_step[step_count]["task_name"] || "*" == task_step[step_count]["task_name"]){
 
    steps += "<p><strong> Step ("+ (step_count+1) +" of "+task_step.length+")</strong><h5>"+task_step[step_count]["step_name"]+"</h5>"+task_step[step_count]["description"]+"</p>"; 
     
