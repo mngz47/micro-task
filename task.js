@@ -48,7 +48,12 @@ var task_step = [{"task_name":"Clipster Training Server Invite",
                   "description": "Captivating virtual slot machine that combines the thrill of traditional slot gaming with modern digital innovation. Designed to provide an immersive and entertaining experience, Karma Slots boasts a visually stunning interface with vibrant colors, dynamic graphics, and smooth animations."},                     
 {"task_name":"Share Game On Facebook",
                  "step_name":"Share on the provided group",
-                  "description": "<a href=https://www.facebook.com/groups/GamerGuys.Girls/ >https://www.facebook.com/groups/GamerGuys.Girls/</a>"},                     
+                  "description":   "Indian gambling (no restrictions)<br>"+
+                                    "<a href=https://www.facebook.com/groups/806013240238640/ >https://www.facebook.com/groups/806013240238640/</a><br>"+
+                                    "3d wall papers (no restrictions)<br>"+
+                                    "<a href=https://www.facebook.com/groups/7291194084223853/ >https://www.facebook.com/groups/7291194084223853/</a><br>"+
+                                    "Very active casino (no restrictions)<br>"+
+                      "<a href=https://www.facebook.com/groups/1387179168603553/ >https://www.facebook.com/groups/1387179168603553/</a><br>"},                     
 
                   {"task_name":"Share Game On Facebook Joker Slots",
                  "step_name":"Download Post image",
@@ -58,7 +63,12 @@ var task_step = [{"task_name":"Clipster Training Server Invite",
                   "description": "Captivating virtual slot machine that combines the thrill of traditional slot gaming with modern digital innovation. Designed to provide an immersive and entertaining experience, Joker Slots boasts a visually stunning interface with vibrant colors, dynamic graphics, and smooth animations."},                     
 {"task_name":"Share Game On Facebook Joker Slots",
                  "step_name":"Share on the provided group",
-                  "description": "<a href=https://www.facebook.com/groups/GamerGuys.Girls/ >https://www.facebook.com/groups/GamerGuys.Girls/</a>"},    
+                  "description": "Indian gambling (no restrictions)<br>"+
+                                    "<a href=https://www.facebook.com/groups/806013240238640/ >https://www.facebook.com/groups/806013240238640/</a><br>"+
+                                    "3d wall papers (no restrictions)<br>"+
+                                    "<a href=https://www.facebook.com/groups/7291194084223853/ >https://www.facebook.com/groups/7291194084223853/</a><br>"+
+                                    "Very active casino (no restrictions)<br>"+
+                      "<a href=https://www.facebook.com/groups/1387179168603553/ >https://www.facebook.com/groups/1387179168603553/</a><br>"},    
                  
                  {"task_name":"*",
                  "step_name":"Send Proof",
