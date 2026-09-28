@@ -295,7 +295,10 @@ chat_count = 0;
 <span id=m-time-q style="float:right;display:inline-block;" >Q</span>
 						
 					</div>
-
+<video width="320" height="240" autoplay>
+  <source id=m-time-video src="movie.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 <div class=block >
 <h3>Set minutes</h3>
 <input id=m-minutes-input type=number />
@@ -332,6 +335,12 @@ chat_count = 0;
 								
 							e('m-time-body').innerHTML = cols[0].innerHTML;
 
+									e('m-time-body').style.backgroungImage = cols[3].innerHTML;
+									e('m-time-body').style.backgroungRepeat = "no-repeat";
+									e('m-time-body').style.backgroungSize = "100% auto";
+
+							e('m-time-video').src = cols[4].innerHTML;								
+									
 							cols[0].style.backgroundColor = 'blue';	
 
 							if(cols[2].innerHTML == 'K'){		
