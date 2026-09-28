@@ -118,7 +118,7 @@ if (step_count<task_step.length){
 
   if(current_task == task_step[step_count]["task_name"] || "*" == task_step[step_count]["task_name"]){
 
-   steps += "<p><strong> Step ("+ (step_count+1) +" of "+task_step.length+")</strong><h5>"+task_step[step_count]["step_name"]+"</h5>"+task_step[step_count]["description"]+"</p>"; 
+   steps += "<p><strong> Step ("+ (step_count+1) +" of "+countTaskSteps(current_task)+")</strong><h5>"+task_step[step_count]["step_name"]+"</h5>"+task_step[step_count]["description"]+"</p>"; 
     
   } 
     
@@ -144,6 +144,19 @@ for(var a=0;a<task_step.length;a++){
 }
  e('task_steps').innerHTML = "<h4>"+task_step.length+" total steps</h4>"+steps+
       "<br><a href='https://docs.google.com/forms/d/e/1FAIpQLScsVQyZDhG1n3lh6bRfyqLKzsP3TA4taqt5iyWX9yp3N5rVhA/viewform?usp=publish-editor' >Submit Proof</a>";
+}
+
+function countTaskSteps(task){
+  var steps = 0;
+  for(var a=0;a<task_step.length;a++){
+
+  if(task == task_step[a]["task_name"] || "*" == task_step[a]["task_name"]){
+
+   steps += 1; 
+    
+  } 
+}
+  return steps;
 }
 
   loadTask();
