@@ -339,10 +339,9 @@ Your browser does not support the video tag.
 									e('m-time-body').style.backgroundRepeat = "no-repeat";
 									e('m-time-body').style.backgroundSize = "100% auto";
 
-							e('m-time-video-src').src = encodeURIComponent(cols[4].innerHTML);
-								e('m-time-video').play();
-						
-								//	e('m-time-video').src = cols[4].innerHTML.replace(/ /g, "%20");							
+							// e('m-time-video-src').src = encodeURIComponent(cols[4].innerHTML);
+								e('m-time-video').src = cols[4].innerHTML.replace(/ /g, "%20");		
+										e('m-time-video').play();
 									
 							cols[0].style.backgroundColor = 'blue';	
 
