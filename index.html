@@ -295,8 +295,8 @@ chat_count = 0;
 <span id=m-time-q style="float:right;display:inline-block;" >Q</span>
 						
 					</div>
-<video width="320" height="240" autoplay=true loop=true >
-  <source id=m-time-video src="movie.mp4" type="video/mp4">
+<video style="margin-left:auto;margin-right:auto;" id=m-time-video width="320" height="240" loop=true >
+  <source id=m-time-video-src type="video/mp4">
 Your browser does not support the video tag.
 </video>
 <div class=block >
@@ -339,9 +339,10 @@ Your browser does not support the video tag.
 									e('m-time-body').style.backgroundRepeat = "no-repeat";
 									e('m-time-body').style.backgroundSize = "100% auto";
 
-							e('m-time-video').src = encodeURIComponent(cols[4].innerHTML);
-								
-						//	e('m-time-video').src = cols[4].innerHTML.replace(/ /g, "%20");							
+							e('m-time-video-src').src = encodeURIComponent(cols[4].innerHTML);
+								e('m-time-video').play();
+						
+								//	e('m-time-video').src = cols[4].innerHTML.replace(/ /g, "%20");							
 									
 							cols[0].style.backgroundColor = 'blue';	
 
