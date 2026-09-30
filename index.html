@@ -290,7 +290,7 @@ chat_count = 0;
 					<div style="min-height:400px;width:400px;margin-left:auto;margin-right:auto;border: 1px solid black;border-radius: 70%;background-color:red;color:green;font-size:2em;" >
 <span id=m-time-minutes >60</span>
 <span id=m-time-k style="float:right;display:inline-block;" >K</span>
-			<div style="min-height:340px;width:340px;margin-left:auto;margin-right:auto;padding-top:150px;border: 1px solid black;background-color:blue;" id=m-time-body >
+			<div style="min-height:340px;width:340px;margin-left:auto;margin-right:auto;padding-top:50px;border: 1px solid black;background-color:blue;" id=m-time-body >
 
 				<video style="margin-left:auto;margin-right:auto;" id=m-time-video width="320" height="240" loop=true >
   <source id=m-time-video-src type="video/mp4">
@@ -336,7 +336,7 @@ Your browser does not support the video tag.
 
 								var cols = rows[a].getElementsByTagName('td');
 								
-							e('m-time-body').innerHTML = cols[0].innerHTML;
+							e('m-time-body').innerHTML += "<h3>"+cols[0].innerHTML+"</h3>";
 
 									e('m-time-body').style.backgroundImage = "url("+cols[3].innerHTML+")";
 									e('m-time-body').style.backgroundRepeat = "no-repeat";
