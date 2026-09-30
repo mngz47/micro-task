@@ -290,15 +290,18 @@ chat_count = 0;
 					<div style="min-height:400px;width:400px;margin-left:auto;margin-right:auto;border: 1px solid black;border-radius: 70%;background-color:red;color:green;font-size:2em;" >
 <span id=m-time-minutes >60</span>
 <span id=m-time-k style="float:right;display:inline-block;" >K</span>
-			<div style="min-height:340px;width:340px;margin-left:auto;margin-right:auto;border: 1px solid black;background-color:blue;" id=m-time-body ></div>
+			<div style="min-height:340px;width:340px;margin-left:auto;margin-right:auto;padding-top:150px;border: 1px solid black;background-color:blue;" id=m-time-body >
+
+				<video style="margin-left:auto;margin-right:auto;" id=m-time-video width="320" height="240" loop=true >
+  <source id=m-time-video-src type="video/mp4">
+Your browser does not support the video tag.
+</video>
+			</div>
 <span id=m-time-v style="display:inline-block;" >V</span>
 <span id=m-time-q style="float:right;display:inline-block;" >Q</span>
 						
 					</div>
-<video style="margin-left:auto;margin-right:auto;" id=m-time-video width="320" height="240" loop=true >
-  <source id=m-time-video-src type="video/mp4">
-Your browser does not support the video tag.
-</video>
+
 <div class=block >
 <h3>Set minutes</h3>
 <input id=m-minutes-input type=number />
