@@ -305,7 +305,7 @@ Your browser does not support the video tag.
 <div class=block >
 <h3>Set minutes</h3>
 <input id=m-minutes-input type=number />
-	<button onclick="m_time_minutes=e('m-minutes-input').value;" >set</button>
+	<button onclick="m_time_minutes=e('m-minutes-input').value;startWatch();" >set</button>
 </div>
 
 
@@ -342,9 +342,9 @@ Your browser does not support the video tag.
 									e('m-time-body').style.backgroundRepeat = "no-repeat";
 									e('m-time-body').style.backgroundSize = "100% auto";
 
-							// e('m-time-video-src').src = encodeURIComponent(cols[4].innerHTML);
-								e('m-time-video').src = cols[4].innerHTML.replace(/ /g, "%20");		
-										e('m-time-video').play();
+								// e('m-time-video-src').src = encodeURIComponent(cols[4].innerHTML);
+									e('m-time-video-src').src = cols[4].innerHTML.replace(/ /g, "%20");		
+									e('m-time-video').play();
 									
 							cols[0].style.backgroundColor = 'blue';	
 
@@ -363,6 +363,7 @@ Your browser does not support the video tag.
 							}
 
 								usedMinutes += parseInt(cols[1].innerHTML);
+								alert("usedMinutes");
 							}
 					}
 				
@@ -377,6 +378,7 @@ Your browser does not support the video tag.
 			}else{
 
 					m_time_minutes=0;
+					usedMinutes = 0;
 					var sw = function(){
 						
 							startWatch();
